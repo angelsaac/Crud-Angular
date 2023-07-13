@@ -2,11 +2,15 @@
   "name": "bases2",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "ng": "C:/Users/angel.dominguez/AppData/Roaming/npm/ng.cmd",
     "start": "ng serve -o",
     "build": "ng build",
+    "build:href": "C:/Users/angel.dominguez/AppData/Roaming/npm/ng.cmd build --base-href ./",
+    "build:github": "npm run delete:docs && npm run build:href && npm run copy:this",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "delete:docs": "del docs",
+    "copy:this":"copyfiles dist/bases2/* ./docs -f"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +37,8 @@
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.3.0",
     "@types/uuid": "^9.0.2",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
