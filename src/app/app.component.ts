@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases2';
+  public title:string = 'bases';
+  public counter :number = 0;
+
+  aumentaContador (value:number): void{
+    (value==0)?this.counter=value: this.counter += value;
+  }
 }
